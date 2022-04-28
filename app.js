@@ -31,10 +31,14 @@ const createPost = () => {
     <div>
       <p>${data.text}</p>
       <span class='options'>
-        <i onClick='editPosts(this)' class='fas fa-edit'></i>
-        <i onClick='deletePosts(this)' class='fas fa-trash-alt'></i>
+        <i onClick='editPost(this)' class='fas fa-edit'></i>
+        <i onClick='deletePost(this)' class='fas fa-trash-alt'></i>
       </span>
     </div>
   `;
   input.value = '';
+};
+
+const deletePost = (e) => {
+  console.log(e.parentElement.parentElement.remove());
 };
