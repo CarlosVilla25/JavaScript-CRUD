@@ -42,3 +42,9 @@ const createPost = () => {
 const deletePost = (e) => {
   console.log(e.parentElement.parentElement.remove());
 };
+
+const editPost = (e) => {
+  console.log(e.parentElement.previousElementSibling.innerHTML);
+  input.value = e.parentElement.previousElementSibling.innerHTML;
+  e.parentElement.parentElement.remove();
+};
